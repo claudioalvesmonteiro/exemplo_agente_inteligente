@@ -11,7 +11,7 @@ class Vehicle():
         self.velocity = vel
         self.position = PVector(x, y)
         self.r = 6
-        self.maxspeed = 1
+        self.maxspeed = 3
         self.maxforce = 0.2
         self.bucho = 0
 
@@ -60,7 +60,7 @@ class Vehicle():
         # shows n of food acquired
         text('CUME: '+str(self.bucho), 50, 50)
         # Draw a triangle rotated in the direction of velocity
-        theta = self.velocity.heading()# + PI / 2
+        theta = self.velocity.heading() + PI / 2
         fill(127)
         noStroke()
         strokeWeight(1)
